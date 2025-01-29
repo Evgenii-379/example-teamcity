@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class WelcomerTest {
-	
+
 	private Welcomer welcomer = new Welcomer();
 
 	@Test
@@ -30,4 +30,11 @@ public class WelcomerTest {
 	public void welcomerSaysSomething(){
 		assertThat(welcomer.saySome(), containsString("something"));
 	}
+
+        @Test
+        public void testGetReplyContainsHunter() {
+            Welcomer welcomer = new Welcomer();
+            assertTrue(welcomer.getReply().contains("hunter"));
+        }
+
 }
